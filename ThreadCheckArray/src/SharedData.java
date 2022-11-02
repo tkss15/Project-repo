@@ -4,11 +4,16 @@ public class SharedData
 	private boolean [] winArray;
 	private boolean flag;
 	private final int b;
-	
+	private Thread winThread;
 	public SharedData(int[] array, int b) {
 		
 		this.array = array;
 		this.b = b;
+	}
+	
+	public void setThread(Thread c)
+	{
+		winThread = c;
 	}
 
 	public boolean[] getWinArray() 
